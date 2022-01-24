@@ -1,1 +1,315 @@
 
+2022-01-24 07:39:32,413 INFO: errors [in /Users/borjagonzalez/Documents/Borja/FSND/projects/01_fyyur/starter_code/app.py:340]
+2022-01-24 07:39:49,749 ERROR: Exception on /venues [GET] [in /Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/borjagonzalez/Documents/Borja/FSND/projects/01_fyyur/starter_code/app.py", line 67, in venues
+    venues = Venue.query.all()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2759, in all
+    return self._iter().all()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2894, in _iter
+    result = self.session.execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1614, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/sql/elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1481, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1845, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 2026, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".facebook_link AS "Venue_facebook_link", "Venue".genres AS "Venue_genres", "Venue".website AS "Venue_website", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue"]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-01-24 07:39:53,551 ERROR: Exception on /artists [GET] [in /Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Artist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/borjagonzalez/Documents/Borja/FSND/projects/01_fyyur/starter_code/app.py", line 156, in artists
+    data = Artist.query.all()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2759, in all
+    return self._iter().all()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2894, in _iter
+    result = self.session.execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1614, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/sql/elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1481, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1845, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 2026, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Artist
+[SQL: SELECT "Artist".id AS "Artist_id", "Artist".name AS "Artist_name", "Artist".city AS "Artist_city", "Artist".state AS "Artist_state", "Artist".phone AS "Artist_phone", "Artist".genres AS "Artist_genres", "Artist".image_link AS "Artist_image_link", "Artist".facebook_link AS "Artist_facebook_link", "Artist".website AS "Artist_website", "Artist".seeking_venue AS "Artist_seeking_venue", "Artist".seeking_description AS "Artist_seeking_description" 
+FROM "Artist"]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-01-24 07:40:07,228 ERROR: Exception on /venues [GET] [in /Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/borjagonzalez/Documents/Borja/FSND/projects/01_fyyur/starter_code/app.py", line 67, in venues
+    locals = []
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2759, in all
+    return self._iter().all()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2894, in _iter
+    result = self.session.execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1614, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/sql/elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1481, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1845, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 2026, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".facebook_link AS "Venue_facebook_link", "Venue".genres AS "Venue_genres", "Venue".website AS "Venue_website", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue"]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-01-24 07:40:08,497 ERROR: Exception on /artists [GET] [in /Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Artist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/borjagonzalez/Documents/Borja/FSND/projects/01_fyyur/starter_code/app.py", line 156, in artists
+    def artists():
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2759, in all
+    return self._iter().all()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2894, in _iter
+    result = self.session.execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1614, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/sql/elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1481, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1845, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 2026, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Artist
+[SQL: SELECT "Artist".id AS "Artist_id", "Artist".name AS "Artist_name", "Artist".city AS "Artist_city", "Artist".state AS "Artist_state", "Artist".phone AS "Artist_phone", "Artist".genres AS "Artist_genres", "Artist".image_link AS "Artist_image_link", "Artist".facebook_link AS "Artist_facebook_link", "Artist".website AS "Artist_website", "Artist".seeking_venue AS "Artist_seeking_venue", "Artist".seeking_description AS "Artist_seeking_description" 
+FROM "Artist"]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-01-24 07:40:09,685 ERROR: Exception on /shows [GET] [in /Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Show
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/borjagonzalez/Documents/Borja/FSND/projects/01_fyyur/starter_code/app.py", line 292, in shows
+    # displays list of shows at /shows
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2759, in all
+    return self._iter().all()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2894, in _iter
+    result = self.session.execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1614, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/sql/elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1481, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1845, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 2026, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Show
+[SQL: SELECT "Artist".image_link AS artist_image_link, "Show".start_time AS "Show_start_time", "Show".artist_id AS "Show_artist_id", "Show".venue_id AS "Show_venue_id", "Artist".name AS artist_name, "Venue".name AS venue_name 
+FROM "Show" JOIN "Venue" ON "Show".venue_id = "Venue".id JOIN "Artist" ON "Show".artist_id = "Artist".id]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-01-24 07:40:39,980 ERROR: Exception on /artists [GET] [in /Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Artist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/borjagonzalez/Documents/Borja/FSND/projects/01_fyyur/starter_code/app.py", line 156, in artists
+    def artists():
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2759, in all
+    return self._iter().all()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/query.py", line 2894, in _iter
+    result = self.session.execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/orm/session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1614, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/sql/elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1481, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1845, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 2026, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/base.py", line 1802, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Artist
+[SQL: SELECT "Artist".id AS "Artist_id", "Artist".name AS "Artist_name", "Artist".city AS "Artist_city", "Artist".state AS "Artist_state", "Artist".phone AS "Artist_phone", "Artist".genres AS "Artist_genres", "Artist".image_link AS "Artist_image_link", "Artist".facebook_link AS "Artist_facebook_link", "Artist".website AS "Artist_website", "Artist".seeking_venue AS "Artist_seeking_venue", "Artist".seeking_description AS "Artist_seeking_description" 
+FROM "Artist"]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-01-24 07:40:44,128 ERROR: Exception on /venues/create [GET] [in /Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/borjagonzalez/Documents/Borja/FSND/projects/01_fyyur/starter_code/app.py", line 108, in create_venue_form
+    def create_venue_form():
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/wtforms/form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/wtforms/form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/wtforms/csrf/core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/Users/borjagonzalez/Library/Python/3.8/lib/python/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
